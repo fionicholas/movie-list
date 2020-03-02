@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:id="@+id/relativeView"
+                android:layout_width="match_parent"
+                android:layout_height="330dp">
+
+
+                <ImageView
+                    android:id="@+id/img_poster_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="330dp"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/poster_bumblebee" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppThemeNoBar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:text="BumbleBee" />
+
+            <TextView
+                android:id="@+id/text_release"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_detail"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:text="Release Date :"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_rating"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_release"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:text="Rating :"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_language"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rating"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:text="Language :"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_release_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_detail"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/text_release"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="23 April 2020" />
+
+            <TextView
+                android:id="@+id/tv_rating_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_release_detail"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/text_release"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="76" />
+
+            <TextView
+                android:id="@+id/tv_language_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rating_detail"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/text_release"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="English" />
+
+            <TextView
+                android:id="@+id/text_overview"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_language"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:text="Overview :"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_overview_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_overview"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="200dp"
+                tools:text="Overview" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
